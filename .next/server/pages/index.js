@@ -107,7 +107,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _starting_page_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./starting-page.module.css */ "./components/starting-page/starting-page.module.css");
 /* harmony import */ var _starting_page_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_starting_page_module_css__WEBPACK_IMPORTED_MODULE_1__);
 
-var _jsxFileName = "D:\\auth-project\\components\\starting-page\\starting-page.js";
+var _jsxFileName = "D:\\Udemy NextJS\\auth-project\\components\\starting-page\\starting-page.js";
 
 
 function StartingPageContent() {
@@ -160,7 +160,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_starting_page_starting_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/starting-page/starting-page */ "./components/starting-page/starting-page.js");
 
-var _jsxFileName = "D:\\auth-project\\pages\\index.js";
+var _jsxFileName = "D:\\Udemy NextJS\\auth-project\\pages\\index.js";
 
 
 function HomePage() {
