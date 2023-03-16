@@ -2,14 +2,14 @@ import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import classes from "./auth-form.module.css";
 import { signIn } from "next-auth/client";
-
+import GoogleSignInButton from "../google/googleSign";
 
 async function createAccount(email, password) {
   const data = {
     email: email,
     password: password,
   };
-  
+
   const res = await fetch("/api/auth/signup", {
     method: "POST",
     body: JSON.stringify(data),
@@ -30,7 +30,7 @@ function AuthForm() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const router = useRouter();
-  const [errorMessage,setErrorMessage] = useState("")
+  const [errorMessage, setErrorMessage] = useState("");
 
   function switchAuthModeHandler() {
     setIsLogin((prevState) => !prevState);
@@ -42,7 +42,7 @@ function AuthForm() {
     const email = emailRef.current.value;
 
     const password = passwordRef.current.value;
-    
+
     if (isLogin) {
       const result = await signIn("credentials", {
         redirect: false,
@@ -79,7 +79,7 @@ function AuthForm() {
           <label htmlFor="password">Your Password</label>
           <input type="password" id="password" required ref={passwordRef} />
         </div>
-        <p style={{color:"white"}}>{errorMessage}</p>
+        <p style={{ color: "white" }}>{errorMessage}</p>
         <div className={classes.actions}>
           <button>{isLogin ? "Login" : "Create Account"}</button>
           <button
@@ -91,6 +91,9 @@ function AuthForm() {
           </button>
         </div>
       </form>
+      <div className={classes.actions}>
+        <GoogleSignInButton/>
+      </div>
     </section>
   );
 }

@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
 import { checkPassword } from "../../../lib/auth";
 import { dbConncect } from "../../../lib/db";
+import GoogleProvider from "next-auth/providers/google"
 
 export default NextAuth({
   session: {
@@ -38,6 +39,10 @@ export default NextAuth({
           email: existEmail.email,
         };
       },
+    }),
+    GoogleProvider({
+      clientId: '434292304388-e9k5f9oiruoacf4ukbot7pc34l6plcqd.apps.googleusercontent.com',
+      clientSecret: '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',
     }),
   ],
 });
